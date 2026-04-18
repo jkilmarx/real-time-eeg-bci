@@ -132,4 +132,20 @@ Visual imagery performance depends strongly on **representational separability**
 
 ---
 
+## 🔬 Follow-Up Work
 
+A follow-up study was conducted to further investigate these limitations and evaluate the robustness of visual imagery as a BCI control paradigm:
+
+**Kilmarx, J., Tashev, I., Millán, J. D. R., Sulzer, J., & Lewis-Peacock, J. (2024). Evaluating the feasibility of visual imagery for an EEG-based Brain–Computer interface. IEEE Transactions on Neural Systems and Rehabilitation Engineering, 32, 2209-2219.**
+
+This work expands on the pilot study by demonstrating:
+
+- **Short-term visual imagery (working memory)** performed immediately after viewing an image produces stronger and more decodable neural signals than **long-term (spontaneous) imagery** retrieved from memory  
+
+- Short-term imagery shares **overlapping neural representations with visual perception**, particularly in posterior (occipital) regions  
+
+- In contrast, long-term visual imagery shows greater involvement of **frontal regions**, reflecting contributions from memory, attention, and cognitive control  
+
+- Long-term imagery produces **weaker and more variable representations**, making it substantially more difficult to decode from EEG    
+
+These findings highlight a key tradeoff: paradigms that are more realistic for real-world BCI use (spontaneous imagery) are also more challenging to decode, emphasizing the importance of task design and user strategy.
