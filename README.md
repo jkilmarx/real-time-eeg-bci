@@ -1,7 +1,5 @@
 # Visual Imagery EEG BCI (Microsoft Research Internship Project)
 
-![Real-Time Visual Imagery BCI System](system_diagram.png)
-
 This repository contains code and tutorials for investigating **visual imagery as a control paradigm for EEG-based brain-computer interfaces (BCIs)**.
 
 The project is based on the following publication:
@@ -105,6 +103,23 @@ Example implementation of a **real-time EEG decoding system**, including:
 ### Real-Time Inference
 - Single-epoch classification from mid-trial window
 - Closed-loop feedback
+
+---
+
+## 🧠 System Architecture
+
+The figure below shows the full end-to-end pipeline for real-time EEG decoding and closed-loop BCI interaction.
+
+![Real-Time Visual Imagery BCI System](system_diagram.png)
+
+Key components:
+- **EEG Acquisition (OpenViBE):** streams multi-channel EEG data
+- **Stimulus Presentation (PsychoPy):** controls experimental paradigm and timing
+- **LSL (Lab Streaming Layer):** synchronizes data and stimulus markers
+- **Real-Time BCI Processing:** performs preprocessing, feature extraction, and classification
+- **Closed-Loop Feedback:** model predictions are presented back to the user in real time
+
+This architecture bridges offline modeling and real-time deployment, enabling interactive BCI control.
 
 ---
 
