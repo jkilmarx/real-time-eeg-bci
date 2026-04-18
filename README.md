@@ -24,7 +24,7 @@ The demo below shows:
 
 - Closed-loop feedback to the user
 
-[Visual Imagery EEG BCI – System Demo](https://www.youtube.com/watch?v=oazo3n4echQ)
+[Visual Imagery EEG BCI – System Demo](https://www.youtube.com/watch?v=LoGBCsFPNzU)
 
 ---
 
