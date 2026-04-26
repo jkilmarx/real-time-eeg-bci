@@ -4,37 +4,22 @@ This repository contains code and tutorials for investigating **visual imagery a
 
 The project is based on the following publication:
 
-**Kilmarx, J., Gamper, H., Emmanouilidou, D., Johnston, D., Cutrell, E., Wilson, A., & Tashev, I. (2022, February). Investigating visual imagery as a BCI control strategy: A pilot study. In 2022 10th International Winter Conference on Brain-Computer Interface (BCI) (pp. 1-6). IEEE.**
+**Kilmarx, J.**, Gamper, H., Emmanouilidou, D., Johnston, D., Cutrell, E., Wilson, A., & Tashev, I. (2022, February). Investigating visual imagery as a BCI control strategy: A pilot study. In _2022 10th International Winter Conference on Brain-Computer Interface (BCI)_ (pp. 1-6). IEEE.
 
----
-
-## 🎥 Project Overview & Live Demo
+## Project Overview & Live Demo
 
 This project includes a full end-to-end pipeline for **real-time EEG decoding and closed-loop BCI control**.
 
-The demo below shows:
-
-- Real-time EEG acquisition
-
-- Online preprocessing and feature extraction
-
-- Live classification of visual imagery (face / scene / rest)
-
-- Closed-loop feedback to the user
+The video below shows:
+- Overview of brain-computer interface applications and control strategies
+- Experimental protocol description
+- Preprocessing and feature extraction methods
+- Results of offline and online classification of visual imagery
+- Real-time BCI demo of closed-loop interaction
 
 [![Visual Imagery EEG BCI – System Demo](https://img.youtube.com/vi/LoGBCsFPNzU/0.jpg)](https://www.youtube.com/watch?v=LoGBCsFPNzU)
 
-*Click to watch the full real-time BCI system in action.*
-
----
-
-## 🚀 Overview
-
-Most EEG-based BCIs rely on:
-- External stimuli (e.g., P300, SSVEP)
-- Motor imagery (sensorimotor rhythms)
-
-This project explores **visual imagery** as an alternative control strategy, where users imagine visual concepts (e.g., faces vs scenes) to drive classification.
+*Click the image above to watch the full real-time BCI system in action.*
 
 Key findings:
 - ~64% accuracy for face vs scene imagery (offline)
@@ -43,11 +28,10 @@ Key findings:
 
 These results demonstrate that visual imagery is a **feasible and intuitive BCI control paradigm**, with potential advantages in scalability and usability.
 
----
 
-## 📊 Repository Contents
+## Repository Contents
 
-### 🧪 Tutorial Notebook
+### Tutorial Notebook
 `analysis_tutorial.ipynb`
 
 Step-by-step walkthrough of:
@@ -56,20 +40,17 @@ Step-by-step walkthrough of:
 - Classification (SVM)
 - Cross-validation
 
----
-
-### ⚙️ Analysis Utilities
+### Analysis Utilities
 `analysis_functions.py`
 
 Helper functions for:
 - Filtering (bandpass + notch)
+- Rereferencing
 - Epoching EEG data
 - Power spectral feature extraction
 - Model training and evaluation
 
----
-
-### ⚡ Real-Time Pipeline
+### Real-Time Pipeline
 `main_realtime_nk.py`  
 `processing_nk.py`
 
@@ -79,9 +60,7 @@ Example implementation of a **real-time EEG decoding system**, including:
 - Real-time classification
 - Feedback loop
 
----
-
-## 🧠 Method Summary
+## Methods Summary
 
 ### Data Acquisition
 - 32-channel EEG (10–20 system)
@@ -89,10 +68,12 @@ Example implementation of a **real-time EEG decoding system**, including:
 - Dry electrode system
 
 ### Preprocessing
+- Rereferencing to mastoid channels
 - Bandpass filtering:
   - 1–40 Hz (observation)
   - 1–125 Hz (imagery)
 - Notch filtering at 60 Hz (and harmonic)
+- z-score standardization
 - Epoching into overlapping windows
 
 ### Features
@@ -106,9 +87,7 @@ Example implementation of a **real-time EEG decoding system**, including:
 - Single-epoch classification from mid-trial window
 - Closed-loop feedback
 
----
-
-## 🧠 System Architecture
+## System Architecture
 
 The figure below shows the full end-to-end pipeline for real-time EEG decoding and closed-loop BCI interaction.
 
@@ -123,22 +102,18 @@ Key components:
 
 This architecture bridges offline modeling and real-time deployment, enabling interactive BCI control.
 
----
-
-## 🧪 Key Insight
+## Key Insight
 
 Visual imagery performance depends strongly on **representational separability**:
 
 - Faces vs scenes → strong separability → better decoding
 - Objects (e.g., flower vs hammer) → higher similarity → worse decoding
 
----
-
-## 🔬 Follow-Up Work
+## Follow-Up Work
 
 A follow-up study was conducted to further investigate these limitations and evaluate the robustness of visual imagery as a BCI control paradigm:
 
-**Kilmarx, J., Tashev, I., Millán, J. D. R., Sulzer, J., & Lewis-Peacock, J. (2024). Evaluating the feasibility of visual imagery for an EEG-based Brain–Computer interface. IEEE Transactions on Neural Systems and Rehabilitation Engineering, 32, 2209-2219.**
+**Kilmarx, J.**, Tashev, I., Millán, J. D. R., Sulzer, J., & Lewis-Peacock, J. (2024). Evaluating the feasibility of visual imagery for an EEG-based Brain–Computer interface. _IEEE Transactions on Neural Systems and Rehabilitation Engineering_, 32, 2209-2219.
 
 This work expands on the pilot study by demonstrating:
 
